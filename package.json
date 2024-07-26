@@ -23,7 +23,6 @@
     "migration:run": "npm run typeorm -- migration:run",
     "migration-revert": "npm run typeorm -- migration:revert",
     "db:drop": "npm run typeorm schema:drop"
-
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
@@ -31,7 +30,12 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^10.0.0",
     "@nestjs/typeorm": "^10.0.2",
+    "@types/jsonwebtoken": "^9.0.6",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
     "dotenv": "^16.4.5",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.12.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
