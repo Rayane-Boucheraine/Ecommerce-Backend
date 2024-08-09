@@ -1,5 +1,7 @@
+import { removeAllListeners } from 'process';
 import { CategoryEntity } from 'src/categories/entities/category.entity';
 import { ProductEntity } from 'src/products/entities/product.entity';
+import { ReviewEntity } from 'src/reviews/entities/review.entity';
 import { Roles } from 'src/utility/common/user-roles.enum';
 import {
   Column,
@@ -33,4 +35,7 @@ export class UserEntity {
 
   @OneToMany(() => ProductEntity, (prod) => prod.addedBy)
   products: ProductEntity[];
+
+  @OneToMany(() => ReviewEntity, (rev) => rev.user)
+  reviews: ReviewEntity[];
 }
